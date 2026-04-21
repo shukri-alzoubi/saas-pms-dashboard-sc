@@ -39,6 +39,7 @@ body {
 
 /* Sidebar Styling */
 .sidebar-container {
+  width: var(--sidebar-width);
   min-width: var(--sidebar-width);
   height: 100vh;
   left: 0;

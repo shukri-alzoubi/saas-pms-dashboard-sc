@@ -10,9 +10,12 @@ import ForgetPassword from './pages/ForgetPassword'
 import PublicRoute from './components/router/PublicRoute'
 import ProtectedRoute from './components/router/ProtectedRoute'
 
+import appData from './data/appData.json';
+
 function App() {
 
   return (<>
+    <title>{appData.appName}</title>
     <BrowserRouter>
       <Routes>
         <Route element={<PublicRoute />}>

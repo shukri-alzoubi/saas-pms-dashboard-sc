@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import appData from '../../data/appData.json'
+import appLogo from '../../assets/logo.svg'
 
 const Sidebar = ({ path, onLogout }) => {
     const links = [
@@ -10,7 +12,10 @@ const Sidebar = ({ path, onLogout }) => {
 
     return (<div className="sidebar text-white h-100">
         <div className="mb-5 px-2">
-            <h3 className="fw-bold"><i className="bi bi-x-diamond-fill text-primary me-2"></i>SaaS</h3>
+            <div className="d-flex align-items-center gap-3 w-100">
+                <img src={appLogo} width={30} />
+                <div className="fs-3 fw-bold">{appData.shortName}</div>
+            </div>
         </div>
 
         <nav className="nav flex-column">
